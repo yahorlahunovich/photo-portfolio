@@ -4,23 +4,32 @@ import { BsFillCameraFill } from "react-icons/bs";
 export default function Navbar() {
   return (
     <nav className="relative text-white flex flex-row justify-between px-5 py-7">
-      <div>
+      <header>
         <a href="#home" className="flex items-center">
           {" "}
-          <span> Egor Lagunovich </span>
+          <span className="uppercase font-bold text-2xl">
+            {" "}
+            Egor Lagunovich{" "}
+          </span>
           <BsFillCameraFill className="ml-2" size={30} />{" "}
         </a>
-      </div>
+      </header>
       <div>
-        <ul className="flex flex-row gap-3">
+        <ul className="flex flex-row gap-3 uppercase font-semibold text-md">
           <li>
-            <a href="#aboutMe">About Me</a>
+            <a href="#aboutMe" className="hover:text-gray-300">
+              About Me
+            </a>
           </li>
           <li>
-            <a href="#portfolio" className="">Portfolio</a>
+            <a href="#portfolio" className="hover:text-gray-300">
+              Portfolio
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" className="hover:text-gray-300">
+              Contact
+            </a>
           </li>
         </ul>
       </div>

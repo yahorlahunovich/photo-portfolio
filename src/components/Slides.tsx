@@ -22,14 +22,14 @@ export default function Slides({
     <div className="relative h-screen w-full m-auto snap-start">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full h-full bg-center bg-cover duration-500"
+        className="w-full h-full bg-center bg-cover bg-fixed duration-500 flex flex-col justify-between items-stretch"
       >
         <Navbar />
         <div className="flex top-4 justify-center py-2">
           {slides.map((slide, slideIndex) => (
             <div
-              className={`text-2xl cursor-pointer ${
-                currentIndex === slideIndex ? "text-gray-600" : ""
+              className={`text-2xl text-white cursor-pointer ${
+                currentIndex === slideIndex ? "text-gray-400" : ""
               }`}
               key={slideIndex}
               onClick={() => goToSlide(slideIndex)}
