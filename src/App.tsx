@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import Slides from "./components/Slides";
+import Navbar from "./components/Navbar";
+import Information from "./components/Information";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -24,13 +28,18 @@ function App() {
   };
   return (
     <div>
-      <Slides
-        prevSlide={prevSlide}
-        nextSlide={nextSlide}
-        goToSlide={goToSlide}
-        slides={slides}
-        currentIndex={currentIndex}
-      />
+      <main className="snap-y snap-proximity overflow-y-scroll h-screen duration-300 scroll-smooth">
+        <Slides
+          prevSlide={prevSlide}
+          nextSlide={nextSlide}
+          goToSlide={goToSlide}
+          slides={slides}
+          currentIndex={currentIndex}
+        />
+        <Information />
+        <Portfolio />
+        <Contact />
+      </main>
     </div>
   );
 }
