@@ -10,8 +10,16 @@ function App() {
   const slides = [
     { url: require("./assets/images/1.jpg") },
     { url: require("./assets/images/2.jpg") },
+    { url: require("./assets/images/antw.jpg") },
+    { url: require("./assets/images/desert-main.jpg") },
+  ];
+  const photos = [
+    { url: require("./assets/images/1.jpg") },
+    { url: require("./assets/images/2.jpg") },
     { url: require("./assets/images/3.jpg") },
-    { url: require("./assets/images/4.jpg") },
+    { url: require("./assets/images/desert-main.jpg") },
+    { url: require("./assets/images/antw.jpg") },
+    { url: require("./assets/images/uni.jpg") },
   ];
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -37,7 +45,7 @@ function App() {
           currentIndex={currentIndex}
         />
         <Information />
-        <Portfolio />
+        <Portfolio photos={photos} />
         <Contact />
       </main>
     </div>
