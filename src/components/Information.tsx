@@ -3,13 +3,13 @@ import React from "react";
 export default function Information() {
   return (
     <div
-      className="text-white bg-black w-full h-screen snap-start flex flex-row justify-center items-center gap-10 p-10"
+      className="text-white bg-black w-full h-auto sm:h-screen snap-start flex flex-col sm:flex-row justify-center items-center gap-10 p-10"
       id="aboutMe"
     >
-      <div className="w-1/3">
+      <div className="w-full sm:w-1/3 ">
         <img src={require("./../assets/images/me.jpg")} alt="me" />
       </div>
-      <div className="w-1/3">
+      <div className="w-full sm:w-1/3 flex-wrap text-xs sm:text-lg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic saepe optio
         eveniet? Dolor, assumenda doloribus. Ab sunt commodi officia, dolorum
         vero veritatis totam magnam a, nobis obcaecati maiores, consectetur non

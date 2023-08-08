@@ -15,6 +15,7 @@ export default function Contact() {
           href="https://www.instagram.com/egorlagunovich"
           target="_blank"
           rel="noreferrer"
+          className="hover:scale-110"
         >
           <AiFillInstagram
             size={40}
@@ -25,6 +26,7 @@ export default function Contact() {
           href="https://www.instagram.com/egorlagunovich"
           target="_blank"
           rel="noreferrer"
+          className="hover:scale-110"
         >
           <Fa500Px
             size={40}
@@ -35,6 +37,7 @@ export default function Contact() {
           href="https://pl.pinterest.com/egorlagunovich/"
           target="_blank"
           rel="noreferrer"
+          className="hover:scale-110"
         >
           <BsPinterest
             size={40}
@@ -45,6 +48,7 @@ export default function Contact() {
           href="https://www.flickr.com/photos/198474106@N05/"
           target="_blank"
           rel="noreferrer"
+          className="hover:scale-110"
         >
           <ImFlickr4
             size={40}
@@ -53,7 +57,9 @@ export default function Contact() {
         </a>
       </div>
       <div className="text-center">
-        <h2 className="uppercase text-xl font-bold italic mb-3">Egor lagunovich photography</h2>
+        <h2 className="uppercase text-xl font-bold italic mb-3">
+          Egor lagunovich photography
+        </h2>
         <p className="uppercase text-xl italic">
           Amateur photographer based in Poland and Belarus
         </p>

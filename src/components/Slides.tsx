@@ -9,6 +9,8 @@ type SlidesProps = {
   prevSlide(): void;
   nextSlide(): void;
   goToSlide(slideIndex: number): void;
+  isNavbar: boolean;
+  toggleNavber(): void;
 };
 
 export default function Slides({
@@ -17,19 +19,21 @@ export default function Slides({
   goToSlide,
   slides,
   currentIndex,
+  isNavbar,
+  toggleNavber,
 }: SlidesProps) {
   return (
     <div className="relative h-screen w-full m-auto snap-start">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full h-full bg-center bg-cover bg-fixed duration-500 flex flex-col justify-between items-stretch"
+        className="w-full h-full bg-center bg-cover bg-fixed duration-300 flex flex-col justify-between"
       >
-        <Navbar />
-        <div className="flex top-4 justify-center py-2">
+        <Navbar isNavbar={isNavbar} toggleNavber={toggleNavber} />
+        <div className="flex top-4 justify-center items-center py-2">
           {slides.map((slide, slideIndex) => (
             <div
               className={`text-2xl text-white cursor-pointer ${
-                currentIndex === slideIndex ? "text-gray-400" : ""
+                currentIndex === slideIndex ? "text-gray-600" : ""
               }`}
               key={slideIndex}
               onClick={() => goToSlide(slideIndex)}
